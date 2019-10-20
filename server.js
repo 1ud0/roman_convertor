@@ -30,9 +30,6 @@ app.get('/event-stream', (req, res) => {
     });
     res.write('\n');
     sseResponseStream = res;
-    req.on('close', function () {
-        console.log("connexion closed");
-    })
 });
 
 app.listen(port, () => {

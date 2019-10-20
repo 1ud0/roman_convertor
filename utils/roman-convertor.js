@@ -1,6 +1,6 @@
 const CONVERTOR = {
     MIN_VALUE: 0,
-    MAX_VALUE: 100 // current max value is 9999 with this implementation
+    MAX_VALUE: 10000 // current max value is 9999 with this implementation
 };
 
 const convertToRomanNumber = function (input) {
@@ -61,7 +61,12 @@ function convertNumber(inputNumber) {
         }
         return convertedDigit;
     }).reverse().join("");
-    return romanNumber;
+    return handleConsecutiveNine(romanNumber);
+}
+
+function handleConsecutiveNine(romanNumber) {
+    // There is only 2 cases to handle : 99 (XCIX) and 999 (CMXCIX)
+    return romanNumber.replace("CMXCIX", "IM").replace("XCIX", "IC");
 }
 
 module.exports = { convertToRomanNumber };
