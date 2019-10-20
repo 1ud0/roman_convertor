@@ -43,7 +43,7 @@ function showResults(result) {
     convertForm.reset();
 }
 
-const handleSubmit = function (event) {
+function handleSubmit(event) {
     event.preventDefault();
     cleanResults();
     fetch("/convertor", {
