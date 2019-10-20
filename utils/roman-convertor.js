@@ -1,6 +1,6 @@
 const CONVERTOR = {
     MIN_VALUE: 0,
-    MAX_VALUE: 10000 // current max value is 9999 with this implementation
+    MAX_VALUE: 100 // current max value is 9999 with this implementation
 };
 
 const convertToRomanNumber = function (input) {
